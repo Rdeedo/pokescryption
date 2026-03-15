@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://dh8go1dc785p3"]
+
+[ext_resource type="PackedScene" uid="uid://c405xipi3ll5h" path="res://scenes/pokecenter.tscn" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://dcip0jd2kt767" path="res://scenes/trainer.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://dlrlto1r0vjl5" path="res://scenes/enemy_trainer.tscn" id="3_sugp2"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0wfyh"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_sugp2"]
+sky_material = SubResource("ProceduralSkyMaterial_0wfyh")
+
+[sub_resource type="Environment" id="Environment_jyhfs"]
+background_mode = 2
+sky = SubResource("Sky_sugp2")
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+fog_density = 0.0
+
+[node name="world" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 1, 0, -1, -4.3711385e-08, 0, 2.9, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jyhfs")
+
+[node name="characters" type="Node3D" parent="."]
+
+[node name="Trainer" parent="characters" instance=ExtResource("2_0wfyh")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 1.256124, 0.060539335, 5.464404)
+
+[node name="EnemyTrainer" parent="characters" instance=ExtResource("3_sugp2")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 8.846923, 0, 0.78094256)
+
+[node name="map" type="Node3D" parent="."]
+
+[node name="pokecenter" parent="map" instance=ExtResource("1_sugp2")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)

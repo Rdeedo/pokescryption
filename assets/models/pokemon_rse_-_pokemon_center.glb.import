@@ -1,0 +1,89 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dwy5nc7wxktg5"
+path="res://.godot/imported/pokemon_rse_-_pokemon_center.glb-4b8c79d1d88c6eca1fe6be5e57f4fcb5.scn"
+
+[deps]
+
+source_file="res://assets/models/pokemon_rse_-_pokemon_center.glb"
+dest_files=["res://.godot/imported/pokemon_rse_-_pokemon_center.glb-4b8c79d1d88c6eca1fe6be5e57f4fcb5.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"nodes": {
+"PATH:Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/Balcony_GRP/Balcony/Balcony_RSE_mat_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/Balcony_GRP/Pokeball_01/Pokeball_01_RSE_pokeball_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/Balcony_GRP/Pokeball_02/Pokeball_02_RSE_pokeball_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/Bookshelf/Bookshelf_RSE_mat_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/Escalator/Escalator_RSE_mat_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/Floor/Floor_RSE_mat_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/PC_02/PC_02_RSE_mat_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Chair_06/Chair_06_RSE_mat_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Table_RSE_mat_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/Tree/Tree_RSE_mat_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/Wall/Wall_RSE_mat_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1

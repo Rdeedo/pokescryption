@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcip0jd2kt767"]
+
+[ext_resource type="Script" uid="uid://dm81y3j73rggt" path="res://scripts/trainer.gd" id="1_pju2t"]
+[ext_resource type="PackedScene" uid="uid://kyxly35fct5n" path="res://scenes/blue_trainer.tscn" id="2_pju2t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pju2t"]
+size = Vector3(1, 1.2999268, 1)
+
+[node name="Trainer" type="CharacterBody3D"]
+script = ExtResource("1_pju2t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 0, 0.9, 0)
+shape = SubResource("BoxShape3D_pju2t")
+
+[node name="visuals" type="Node3D" parent="."]
+
+[node name="Sketchfab_Scene2" parent="visuals" instance=ExtResource("2_pju2t")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, -0.4)
+
+[node name="camera_mount" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.90000004, 0)
+
+[node name="Camera3D" type="Camera3D" parent="camera_mount"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.40000004, -0.6)
+
+[node name="interact_ray" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.39889377, 0)
+target_position = Vector3(0, -1.5, 0)
+collision_mask = 3
+collide_with_areas = true
+debug_shape_thickness = 5

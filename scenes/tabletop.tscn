@@ -1,0 +1,222 @@
+[gd_scene load_steps=10 format=3 uid="uid://85ibxa7do73t"]
+
+[ext_resource type="PackedScene" uid="uid://b7sklnqqo3qxy" path="res://assets/models/pokeball.glb" id="2_spgeg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kq8d2"]
+albedo_color = Color(0.5128651, 0.7242506, 0.67597824, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_spgeg"]
+size = Vector3(0.3, 0.15480956, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pyl8p"]
+albedo_color = Color(0.36282945, 0.36282945, 0.36282945, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qp3h"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_75rrl"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_osl0y"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7obph"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_spgeg"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="Tabletop" type="Node3D"]
+
+[node name="table" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3000001, 0.00049999356, 1.1000001)
+visible = false
+material_override = SubResource("StandardMaterial3D_kq8d2")
+size = Vector3(2.6000001, 0.001, 2.2)
+
+[node name="button" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 1.5)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="button" groups=["button"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89870656, 0.07740478, 0.20090067)
+shape = SubResource("BoxShape3D_spgeg")
+
+[node name="base" type="CSGBox3D" parent="button"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0.05, 0.20000005)
+layers = 4
+material_override = SubResource("StandardMaterial3D_pyl8p")
+size = Vector3(0.3, 0.1, 0.3)
+
+[node name="button" type="CSGCylinder3D" parent="button"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0.07499999, 0.19999993)
+layers = 4
+material_override = SubResource("StandardMaterial3D_7qp3h")
+radius = 0.1
+height = 0.14999999
+
+[node name="card_layout" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7849276, 0, 0.28101918)
+
+[node name="slot1" type="Node3D" parent="card_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
+
+[node name="slot2" type="Node3D" parent="card_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39999998, 0, -0.2)
+
+[node name="slot3" type="Node3D" parent="card_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.79999995, 0, -0.2)
+
+[node name="slot4" type="Node3D" parent="card_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0, -0.2)
+
+[node name="slot5" type="Node3D" parent="card_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.49999997)
+
+[node name="slot6" type="Node3D" parent="card_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39999998, 0, 0.49999997)
+
+[node name="slot7" type="Node3D" parent="card_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.79999995, 0, 0.49999997)
+
+[node name="slot8" type="Node3D" parent="card_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0, 0.49999997)
+
+[node name="slot9" type="Node3D" parent="card_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.1999999)
+
+[node name="slot10" type="Node3D" parent="card_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39999998, 0, 1.1999999)
+
+[node name="slot11" type="Node3D" parent="card_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.79999995, 0, 1.1999999)
+
+[node name="slot12" type="Node3D" parent="card_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0, 1.1999999)
+
+[node name="lives" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6000001, 0, 0.8)
+
+[node name="life" parent="lives" instance=ExtResource("2_spgeg")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -2.3841858e-07, -0.05, -0.30000004)
+
+[node name="life2" parent="lives" instance=ExtResource("2_spgeg")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -2.3841858e-07, -0.05, 0)
+
+[node name="scale" type="Node3D" parent="."]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 0.4, 0, 0.8327358)
+
+[node name="scale_amount" type="Node3D" parent="scale"]
+
+[node name="scale-5" type="CSGBox3D" parent="scale/scale_amount"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31958687, 0.001, -0.002750516)
+material_override = SubResource("StandardMaterial3D_75rrl")
+size = Vector3(0.04990235, 0.001, 0.034863282)
+
+[node name="scale-4" type="CSGBox3D" parent="scale/scale_amount"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.265, 0.001, -0.003000021)
+material_override = SubResource("StandardMaterial3D_osl0y")
+size = Vector3(0.04990235, 0.001, 0.034863282)
+
+[node name="scale-3" type="CSGBox3D" parent="scale/scale_amount"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21, 0.001, -0.003000021)
+material_override = SubResource("StandardMaterial3D_osl0y")
+size = Vector3(0.04990235, 0.001, 0.034863282)
+
+[node name="scale-2" type="CSGBox3D" parent="scale/scale_amount"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.155, 0.001, -0.003000021)
+material_override = SubResource("StandardMaterial3D_osl0y")
+size = Vector3(0.04990235, 0.001, 0.034863282)
+
+[node name="scale-1" type="CSGBox3D" parent="scale/scale_amount"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.099999994, 0.001, -0.003000021)
+material_override = SubResource("StandardMaterial3D_osl0y")
+size = Vector3(0.04990235, 0.001, 0.034863282)
+
+[node name="scale1" type="CSGBox3D" parent="scale/scale_amount"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.044927955, 0.001, -0.002750516)
+material_override = SubResource("StandardMaterial3D_7obph")
+size = Vector3(0.04990235, 0.001, 0.034863282)
+
+[node name="scale2" type="CSGBox3D" parent="scale/scale_amount"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.009658933, 0.001, -0.003000021)
+material_override = SubResource("StandardMaterial3D_7obph")
+size = Vector3(0.04990235, 0.001, 0.034863282)
+
+[node name="scale3" type="CSGBox3D" parent="scale/scale_amount"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06465891, 0.001, -0.003000021)
+material_override = SubResource("StandardMaterial3D_7obph")
+size = Vector3(0.04990235, 0.001, 0.034863282)
+
+[node name="scale4" type="CSGBox3D" parent="scale/scale_amount"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11965892, 0.001, -0.003000021)
+material_override = SubResource("StandardMaterial3D_7obph")
+size = Vector3(0.04990235, 0.001, 0.034863282)
+
+[node name="scale5" type="CSGBox3D" parent="scale/scale_amount"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17465892, 0.001, -0.003000021)
+material_override = SubResource("StandardMaterial3D_7obph")
+size = Vector3(0.04990235, 0.001, 0.034863282)
+
+[node name="scale_border" type="Node3D" parent="scale"]
+
+[node name="bottom_bar" type="CSGBox3D" parent="scale/scale_border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.073467135, 0.001, 0.020679355)
+material_override = SubResource("StandardMaterial3D_spgeg")
+size = Vector3(0.5615448, 0.001, 0.004635621)
+
+[node name="left_bar" type="CSGBox3D" parent="scale/scale_border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3518578, 0.001, -0.003553927)
+material_override = SubResource("StandardMaterial3D_spgeg")
+size = Vector3(0.0047634095, 0.001, 0.0533432)
+
+[node name="right_bar" type="CSGBox3D" parent="scale/scale_border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20550933, 0.001, -0.003553927)
+material_override = SubResource("StandardMaterial3D_spgeg")
+size = Vector3(0.004787527, 0.001, 0.0533432)
+
+[node name="-4_bar" type="CSGBox3D" parent="scale/scale_border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29228398, 0.001, -0.003553927)
+material_override = SubResource("StandardMaterial3D_spgeg")
+size = Vector3(0.0013810871, 0.001, 0.0533432)
+
+[node name="-3_bar" type="CSGBox3D" parent="scale/scale_border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.237, 0.001, -0.004)
+material_override = SubResource("StandardMaterial3D_spgeg")
+size = Vector3(0.0013810871, 0.001, 0.0533432)
+
+[node name="-2_bar" type="CSGBox3D" parent="scale/scale_border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182, 0.001, -0.004)
+material_override = SubResource("StandardMaterial3D_spgeg")
+size = Vector3(0.0013810871, 0.001, 0.0533432)
+
+[node name="-1_bar" type="CSGBox3D" parent="scale/scale_border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.127, 0.001, -0.004)
+material_override = SubResource("StandardMaterial3D_spgeg")
+size = Vector3(0.0013810871, 0.001, 0.0533432)
+
+[node name="0_bar" type="CSGBox3D" parent="scale/scale_border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.072, 0.001, -0.004)
+material_override = SubResource("StandardMaterial3D_spgeg")
+size = Vector3(0.0013810871, 0.001, 0.0533432)
+
+[node name="1_bar" type="CSGBox3D" parent="scale/scale_border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017, 0.001, -0.004)
+material_override = SubResource("StandardMaterial3D_spgeg")
+size = Vector3(0.0013810871, 0.001, 0.0533432)
+
+[node name="2_bar" type="CSGBox3D" parent="scale/scale_border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038, 0.001, -0.004)
+material_override = SubResource("StandardMaterial3D_spgeg")
+size = Vector3(0.0013810871, 0.001, 0.0533432)
+
+[node name="3_bar" type="CSGBox3D" parent="scale/scale_border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.093, 0.001, -0.004)
+material_override = SubResource("StandardMaterial3D_spgeg")
+size = Vector3(0.0013810871, 0.001, 0.0533432)
+
+[node name="4_bar" type="CSGBox3D" parent="scale/scale_border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.148, 0.001, -0.004)
+material_override = SubResource("StandardMaterial3D_spgeg")
+size = Vector3(0.0013810871, 0.001, 0.0533432)

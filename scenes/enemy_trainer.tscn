@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlrlto1r0vjl5"]
+
+[ext_resource type="PackedScene" uid="uid://chww48tbcg6fr" path="res://assets/models/trainer_red_-_pokemon_3d_sprite.glb" id="1_mit5w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uolas"]
+size = Vector3(1, 1.2999268, 1)
+
+[node name="EnemyTrainer" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 0, 0.9, -0.3)
+shape = SubResource("BoxShape3D_uolas")
+
+[node name="visuals" type="Node3D" parent="."]
+
+[node name="Sketchfab_Scene" parent="visuals" instance=ExtResource("1_mit5w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)

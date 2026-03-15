@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://kyxly35fct5n"]
+
+[ext_resource type="PackedScene" uid="uid://chww48tbcg6fr" path="res://assets/models/trainer_red_-_pokemon_3d_sprite.glb" id="1_fs68n"]
+[ext_resource type="Texture2D" uid="uid://ckp3mxcidpt8n" path="res://assets/textures/trainer_red_-_pokemon_3d_sprite_1.png" id="2_1b2up"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dfchs"]
+resource_name = "palette"
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("2_1b2up")
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_fs68n")]
+
+[node name="Object_2" parent="Sketchfab_model/85d41b819d464df5887c19a5f8faafd4_obj_cleaner_materialmerger_gles" index="0"]
+material_override = SubResource("StandardMaterial3D_dfchs")
