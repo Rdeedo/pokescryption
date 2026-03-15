@@ -29,7 +29,6 @@ func set_enemy_state(new_state: String):
 	print("Enemy state changed to:", enemy_state)
 
 func _physics_process(delta: float) -> void:
-	# Gravity + jumping
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		
@@ -79,13 +78,11 @@ func try_interact():
 	if hit == null:
 		return
 
-	# Case 1: the hit node itself is the table
 	if hit.is_in_group("table"):
 		print("Table root hit")
 		interact_with_table(hit)
 		return
 
-	# Case 2: the hit node is a child of the table
 	var parent = hit.get_parent()
 	if parent and parent.is_in_group("table"):
 		print("Table parent hit")
@@ -108,14 +105,12 @@ func handle_table_mouse_input():
 		if result:
 			var hit = result.collider
 
-			# Card slot click
 			if hit.is_in_group("card_slot"):
 				on_card_slot_clicked(hit)
 				return
 
-			# Button click (still works if you want it for something else)
 			if hit.is_in_group("button"):
-				on_table_button_pressed(hit)
+				on_table_button_pressed()
 				return
 
 func on_card_slot_clicked(slot):
@@ -123,15 +118,9 @@ func on_card_slot_clicked(slot):
 		return
 
 	var card = CardScene.instantiate()
-	get_tree().current_scene.add_child(card)  # spawn globally
-
-	# Start at player spawn
+	get_tree().current_scene.add_child(card)   
 	card.global_transform.origin = player_spawn.global_transform.origin
-
-	# Animate into place
 	animate_card_to_slot(card, slot)
-
-	# Track it
 	placed_cards[slot] = card
 	
 func animate_card_to_slot(card: Node3D, slot: Node3D) -> Signal:
@@ -153,17 +142,14 @@ func animate_card_to_slot(card: Node3D, slot: Node3D) -> Signal:
 
 	return tween.finished
 
-func on_table_button_pressed(button):
-	# Enemy always attempts an attack
+func on_table_button_pressed():
 	set_enemy_state("attack")
 
-	# 50% chance to place a card
 	if randf() < 0.5:
 		await place_random_card()
 	else:
 		print("Enemy attempted attack but failed the 50% chance")
 
-	# After the attempt (success or fail), return to defend
 	set_enemy_state("defend")
 
 func place_random_card() -> void:
@@ -179,7 +165,6 @@ func place_random_card() -> void:
 
 	card.global_transform.origin = enemy_spawn.global_transform.origin
 
-	# Animate card into place
 	await animate_card_to_slot(card, slot)
 
 	placed_cards[slot] = card
@@ -187,18 +172,15 @@ func place_random_card() -> void:
 func interact_with_table(table):
 	busy = true
 	in_table_view = true
-	# Save original position
 	original_pos = global_transform.origin
 
 	print("Interacting with table")
-	# Get the table's camera
 	var tabletop = table.get_node("Tabletop")
 	card_slots = tabletop.get_node("card_layout").get_children()
 	table_camera = table.get_node("table_camera")
 	mouse_ray = table_camera.get_node("mouse_ray")
 	player_spawn = tabletop.get_node("player_spawn")
 	enemy_spawn = tabletop.get_node("enemy_spawn")
-	# Step 1: shift player slightly to the right
 	var right_shift = transform.basis.x * 0.5
 	var target_pos = global_transform.origin + right_shift
 
@@ -210,7 +192,6 @@ func interact_with_table(table):
 		0.25
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 
-	# Step 2: switch camera after movement
 	tween.finished.connect(func():
 		print("player_camera:", player_camera)
 		print("table_camera:", table_camera)
@@ -223,12 +204,10 @@ func exit_table_view():
 	busy = true
 	in_table_view = false
 
-	# Swap cameras immediately
 	if table_camera:
 		table_camera.current = false
 	player_camera.current = true
 
-	# Now tween the player back to their original position
 	var tween = create_tween()
 	tween.tween_property(
 		self,
@@ -255,13 +234,10 @@ func smooth_step(dir: Vector3) -> void:
 
 	var motion = dir.normalized() * STEP_DISTANCE
 
-	# --- CORRECT PHYSICS CHECK ---
-	# test_move() == true means BLOCKED
 	if test_move(global_transform, motion):
 		busy = false
-		return  # can't move
+		return  
 
-	# Movement is safe → tween to the new position
 	var target_pos = global_transform.origin + motion
 
 	var tween = create_tween()
