@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://bannc1bt26584"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_h4roa"]
+
+[resource]
+script = ExtResource("1_h4roa")
+card_name = "Lickitung"
+rarity = "Uncommon"
+attack = 1
+health = 4
+cost = 2
+ability = "None"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

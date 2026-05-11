@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dcip0jd2kt767"]
+[gd_scene load_steps=6 format=3 uid="uid://dcip0jd2kt767"]
 
 [ext_resource type="Script" uid="uid://dm81y3j73rggt" path="res://scripts/trainer.gd" id="1_pju2t"]
 [ext_resource type="PackedScene" uid="uid://kyxly35fct5n" path="res://scenes/blue_trainer.tscn" id="2_pju2t"]
+[ext_resource type="AudioStream" uid="uid://bvxqs1xnc031e" path="res://sounds/sfx/Playing Card.mp3" id="3_utvbv"]
+[ext_resource type="AudioStream" uid="uid://bcbxgp5sqxg0i" path="res://sounds/sfx/Button.mp3" id="4_y55kb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pju2t"]
 size = Vector3(1, 1.2999268, 1)
@@ -30,3 +32,10 @@ target_position = Vector3(0, -1.5, 0)
 collision_mask = 3
 collide_with_areas = true
 debug_shape_thickness = 5
+
+[node name="CardSFX" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_utvbv")
+
+[node name="ButtonSFX" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_y55kb")
+volume_db = -10.0

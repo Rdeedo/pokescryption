@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://cm0voeekhxqlo"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_wn8ds"]
+
+[resource]
+script = ExtResource("1_wn8ds")
+card_name = "Mewtwo"
+rarity = "Rare"
+attack = 5
+health = 5
+cost = 4
+ability = "Psychic Terrain"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

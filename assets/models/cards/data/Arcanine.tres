@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://bp1wmlu8bf2cn"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_lqq5m"]
+
+[resource]
+script = ExtResource("1_lqq5m")
+card_name = "Arcanine"
+rarity = "Uncommon"
+attack = 1
+health = 3
+cost = 2
+ability = "Flame Body"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

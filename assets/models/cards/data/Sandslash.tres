@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://ery50x3tj1e3"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_xhs7k"]
+
+[resource]
+script = ExtResource("1_xhs7k")
+card_name = "Sandslash"
+rarity = "Uncommon"
+attack = 2
+health = 3
+cost = 3
+ability = "Earth Eater"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

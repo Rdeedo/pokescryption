@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://3ids3xdt3qls"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_yw03r"]
+
+[resource]
+script = ExtResource("1_yw03r")
+card_name = "Pinsir"
+rarity = "Uncommon"
+attack = 2
+health = 3
+cost = 2
+ability = "None"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

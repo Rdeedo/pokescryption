@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://ifh2lwu2b21a"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_qhm7g"]
+
+[resource]
+script = ExtResource("1_qhm7g")
+card_name = "Venomoth"
+rarity = "Uncommon"
+attack = 2
+health = 2
+cost = 2
+ability = "Poison Point"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

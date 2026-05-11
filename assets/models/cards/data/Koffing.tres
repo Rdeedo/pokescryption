@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://c88rdik8qy6a7"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_lmegl"]
+
+[resource]
+script = ExtResource("1_lmegl")
+card_name = "Koffing"
+rarity = "Uncommon"
+attack = 1
+health = 1
+cost = 2
+ability = "Self Destruct"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

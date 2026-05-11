@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://rk00iyf6t7gs"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_ubpuu"]
+
+[resource]
+script = ExtResource("1_ubpuu")
+card_name = "Primeape"
+rarity = "Uncommon"
+attack = 5
+health = 1
+cost = 3
+ability = "None"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

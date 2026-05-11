@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://bhnpp7cytmvlx"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_y4ech"]
+
+[resource]
+script = ExtResource("1_y4ech")
+card_name = "Cubone"
+rarity = "Uncommon"
+attack = 2
+health = 1
+cost = 2
+ability = "Earth Eater"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

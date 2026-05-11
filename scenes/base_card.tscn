@@ -1,23 +1,34 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3durnbntgv1a"]
+[gd_scene load_steps=6 format=3 uid="uid://c3durnbntgv1a"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0s0jn"]
-albedo_color = Color(0.20696431, 0.66955847, 0.8047785, 1)
+[ext_resource type="Script" uid="uid://ck5uhrbs0aefp" path="res://scripts/Card.gd" id="1_x54o6"]
+[ext_resource type="PackedScene" uid="uid://b5xveqfg0og6h" path="res://scenes/card_ui.tscn" id="2_drw6k"]
+[ext_resource type="Material" uid="uid://diccln5n0ny56" path="res://assets/CardMaterial.tres" id="2_wr47h"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_0s0jn"]
-material = SubResource("StandardMaterial3D_0s0jn")
-size = Vector3(0.3, 0.026, 0.5)
+[sub_resource type="PlaneMesh" id="PlaneMesh_x54o6"]
+size = Vector2(0.3, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0s0jn"]
-size = Vector3(0.29992676, 0.02734375, 0.5019531)
+size = Vector3(0.29992676, 0.024673462, 0.5019531)
 
 [node name="card" type="Node3D" groups=["card"]]
+script = ExtResource("1_x54o6")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.013, 0.25)
-mesh = SubResource("BoxMesh_0s0jn")
+mesh = SubResource("PlaneMesh_x54o6")
+surface_material_override/0 = ExtResource("2_wr47h")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 128
+collision_mask = 128
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.3221664e-05, 1.1175871e-08, 0.0022375584)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14990678, 0.011664867, 0.25223756)
 shape = SubResource("BoxShape3D_0s0jn")
+debug_color = Color(0.9959261, 0, 0.20477068, 0.41960785)
+
+[node name="CardUI" parent="." instance=ExtResource("2_drw6k")]
+
+[connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]

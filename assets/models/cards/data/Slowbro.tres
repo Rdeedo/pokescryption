@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://dah4go4pmaudt"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_q3fbu"]
+
+[resource]
+script = ExtResource("1_q3fbu")
+card_name = "Slowbro"
+rarity = "Uncommon"
+attack = 1
+health = 3
+cost = 2
+ability = "Psychic Terrain"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

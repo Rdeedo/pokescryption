@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://yo2dfbpu7nxa"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_i5t3c"]
+
+[resource]
+script = ExtResource("1_i5t3c")
+card_name = "Jynx"
+rarity = "Uncommon"
+attack = 4
+health = 1
+cost = 3
+ability = "Psychic Terrain"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

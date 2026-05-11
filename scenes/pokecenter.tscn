@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=4 uid="uid://c405xipi3ll5h"]
+[gd_scene load_steps=96 format=4 uid="uid://c405xipi3ll5h"]
 
 [ext_resource type="Texture2D" uid="uid://ddctvxjcd5okv" path="res://assets/models/pokemon_rse_-_pokemon_center_0.png" id="1_7nqcm"]
 [ext_resource type="Texture2D" uid="uid://bt7qv5s5qedcf" path="res://assets/models/pokemon_rse_-_pokemon_center_1.png" id="2_fsfyu"]
@@ -656,15 +656,32 @@ albedo_color = Color(0.36282945, 0.36282945, 0.36282945, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fk4o5"]
 albedo_color = Color(1, 0, 0, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s52yi"]
-albedo_color = Color(0.68647087, 0.9676165, 0.9009283, 1)
+[sub_resource type="PlaneMesh" id="PlaneMesh_s52yi"]
+size = Vector2(0.3, 0.5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_vmo8e"]
-material = SubResource("StandardMaterial3D_s52yi")
-size = Vector3(0.3, 0.013, 0.5)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nge4d"]
+albedo_color = Color(0.54901963, 1, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s52yi"]
 size = Vector3(0.29992676, 0.02734375, 0.5019531)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fqu4o"]
+size = Vector2(0.3, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ex541"]
+albedo_color = Color(0.54901963, 1, 1, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wv3tq"]
+size = Vector2(0.3, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nrbmn"]
+albedo_color = Color(0.54901963, 1, 1, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_h76vk"]
+size = Vector2(0.3, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tswil"]
+albedo_color = Color(0.54901963, 1, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_462lq"]
 albedo_color = Color(0, 1, 0, 1)
@@ -1265,9 +1282,10 @@ skeleton = NodePath("")
 transform = Transform3D(5.944159, 0, 0, 0, 4.0940967, 4.309455, 0, -4.309455, 4.0940967, 5.26, 1.0055841, 2.565716)
 
 [node name="mouse_ray" type="RayCast3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/table_camera"]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
 target_position = Vector3(0, 0, -10)
-collision_mask = 4
+collision_mask = 132
+collide_with_areas = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table"]
 collision_layer = 3
@@ -1309,86 +1327,90 @@ height = 0.14999999
 [node name="card_layout" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7849276, 0, 0.28101918)
 
-[node name="slot1" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout"]
+[node name="slot1" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout" groups=["row1"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
 
-[node name="slot2" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout"]
+[node name="slot2" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout" groups=["row1"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39999998, 0, -0.2)
 
-[node name="slot3" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout"]
+[node name="slot3" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout" groups=["row1"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.79999995, 0, -0.2)
 
-[node name="slot4" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout"]
+[node name="slot4" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout" groups=["row1"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0, -0.2)
 
-[node name="slot5" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout"]
+[node name="slot5" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout" groups=["row2"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.49999997)
 
-[node name="slot6" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout"]
+[node name="slot6" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout" groups=["row2"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39999998, 0, 0.49999997)
 
-[node name="slot7" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout"]
+[node name="slot7" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout" groups=["row2"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.79999995, 0, 0.49999997)
 
-[node name="slot8" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout"]
+[node name="slot8" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout" groups=["row2"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0, 0.49999997)
 
-[node name="slot9" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout" groups=["no_random"]]
+[node name="slot9" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout" groups=["card_slot", "row3"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.1999999)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.013, 0.25)
-mesh = SubResource("BoxMesh_vmo8e")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.005, 0.25)
+mesh = SubResource("PlaneMesh_s52yi")
+surface_material_override/0 = SubResource("StandardMaterial3D_nge4d")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot9/MeshInstance3D" groups=["card_slot"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14999962, -0.013000011, -0.25000024)
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.3841858e-07)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot9/MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot9/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.013, 0.25)
 shape = SubResource("BoxShape3D_s52yi")
 debug_color = Color(0.99215686, 0, 0, 1)
 
-[node name="slot10" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout" groups=["no_random"]]
+[node name="slot10" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout" groups=["card_slot", "row3"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39999998, 0, 1.1999999)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot10"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.013, 0.25)
-mesh = SubResource("BoxMesh_vmo8e")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.005, 0.25)
+mesh = SubResource("PlaneMesh_fqu4o")
+surface_material_override/0 = SubResource("StandardMaterial3D_ex541")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot10/MeshInstance3D" groups=["card_slot"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14999962, -0.013000011, -0.25000024)
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.3841858e-07)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot10/MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot10/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.013, 0.25)
 shape = SubResource("BoxShape3D_s52yi")
 debug_color = Color(0.99215686, 0, 0, 1)
 
-[node name="slot11" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout" groups=["no_random"]]
+[node name="slot11" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout" groups=["card_slot", "row3"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.79999995, 0, 1.1999999)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot11"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.013, 0.25)
-mesh = SubResource("BoxMesh_vmo8e")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.005, 0.25)
+mesh = SubResource("PlaneMesh_wv3tq")
+surface_material_override/0 = SubResource("StandardMaterial3D_nrbmn")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot11/MeshInstance3D" groups=["card_slot"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14999962, -0.013000011, -0.25000024)
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.3841858e-07)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot11/MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot11/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.013, 0.25)
 shape = SubResource("BoxShape3D_s52yi")
 debug_color = Color(0.99215686, 0, 0, 1)
 
-[node name="slot12" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout" groups=["no_random"]]
+[node name="slot12" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout" groups=["card_slot", "row3"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0, 1.1999999)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot12"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.013, 0.25)
-mesh = SubResource("BoxMesh_vmo8e")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.005, 0.25)
+mesh = SubResource("PlaneMesh_h76vk")
+surface_material_override/0 = SubResource("StandardMaterial3D_tswil")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot12/MeshInstance3D" groups=["card_slot"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14999962, -0.013000011, -0.25000024)
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.3841858e-07)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot12/MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop/card_layout/slot12/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.013, 0.25)
 shape = SubResource("BoxShape3D_s52yi")
 debug_color = Color(0.99215686, 0, 0, 1)
@@ -1520,10 +1542,13 @@ material_override = SubResource("StandardMaterial3D_ndnsl")
 size = Vector3(0.0013810871, 0.001, 0.0533432)
 
 [node name="player_spawn" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.363143, 0, 2.5628307)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.363143, 0.13125306, 2.5628307)
 
 [node name="enemy_spawn" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4855256, 0, -0.70456374)
+
+[node name="player_hand" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP/Table/Tabletop"]
+transform = Transform3D(1.4285722, 0, 0, 0, 1.4285722, 0, 0, 0, 1.4285722, 1.3457961, 0.40000004, 1.9151373)
 
 [node name="Chair_01" type="Node3D" parent="Sketchfab_model/RSE_Pokecenter_fbx/RootNode/RSE_Pokecenter_GRP/TableChair_GRP"]
 

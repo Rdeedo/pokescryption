@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://cbymgv2cl7len"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_vci2k"]
+
+[resource]
+script = ExtResource("1_vci2k")
+card_name = "Ekans"
+rarity = "Uncommon"
+attack = 1
+health = 1
+cost = 2
+ability = "Poison Touch"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

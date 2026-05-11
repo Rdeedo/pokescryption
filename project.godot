@@ -15,6 +15,13 @@ run/main_scene="uid://dh8go1dc785p3"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+UIManager="*res://scripts/UIManager.gd"
+CardDatabase="*res://scripts/CardDatabase.gd"
+HandManager="*res://scripts/HandManager.gd"
+AbilitySystem="*res://scripts/AbilitySystem.gd"
+
 [input]
 
 forward={

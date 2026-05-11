@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://csg2f5si6wf5m"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_n7t3l"]
+
+[resource]
+script = ExtResource("1_n7t3l")
+card_name = "Kangaskhan"
+rarity = "Rare"
+attack = 3
+health = 3
+cost = 3
+ability = "Parental Bond"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

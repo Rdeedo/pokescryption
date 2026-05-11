@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://dkfh5w814tixa"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_w8i3k"]
+
+[resource]
+script = ExtResource("1_w8i3k")
+card_name = "Staryu"
+rarity = "Uncommon"
+attack = 2
+health = 1
+cost = 1
+ability = "None"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

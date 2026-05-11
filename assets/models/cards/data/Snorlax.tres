@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://b3arlb4c8jo6s"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_v4n41"]
+
+[resource]
+script = ExtResource("1_v4n41")
+card_name = "Snorlax"
+rarity = "Rare"
+attack = 2
+health = 10
+cost = 4
+ability = "None"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

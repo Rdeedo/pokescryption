@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://bl7ogtt6ou0wq"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_623xx"]
+
+[resource]
+script = ExtResource("1_623xx")
+card_name = "Porygon"
+rarity = "Uncommon"
+attack = 2
+health = 2
+cost = 1
+ability = "None"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

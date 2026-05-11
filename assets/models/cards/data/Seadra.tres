@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://csiyx044ivwfd"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_4v5it"]
+
+[resource]
+script = ExtResource("1_4v5it")
+card_name = "Seadra"
+rarity = "Uncommon"
+attack = 3
+health = 1
+cost = 2
+ability = "Swift Swim"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

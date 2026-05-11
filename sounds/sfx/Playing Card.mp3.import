@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bvxqs1xnc031e"
+path="res://.godot/imported/Playing Card.mp3-0e1667fe7b3059b269f11da81644ede5.mp3str"
+
+[deps]
+
+source_file="res://sounds/sfx/Playing Card.mp3"
+dest_files=["res://.godot/imported/Playing Card.mp3-0e1667fe7b3059b269f11da81644ede5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://cndse1vg6dskd"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_kntrj"]
+
+[resource]
+script = ExtResource("1_kntrj")
+card_name = "Hitmonchan"
+rarity = "Uncommon"
+attack = 4
+health = 2
+cost = 2
+ability = "None"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

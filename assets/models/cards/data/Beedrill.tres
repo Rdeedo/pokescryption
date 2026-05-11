@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://djj78mht2mfgb"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_8d750"]
+
+[resource]
+script = ExtResource("1_8d750")
+card_name = "Beedrill"
+rarity = "Uncommon"
+attack = 5
+health = 3
+cost = 3
+ability = "Poison Point"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

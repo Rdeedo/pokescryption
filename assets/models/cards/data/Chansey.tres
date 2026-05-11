@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://qa2etvd44qgg"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_a408w"]
+
+[resource]
+script = ExtResource("1_a408w")
+card_name = "Chansey"
+rarity = "Rare"
+attack = 1
+health = 8
+cost = 2
+ability = "Friend Guard"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

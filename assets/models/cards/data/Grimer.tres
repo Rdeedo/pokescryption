@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://frtt6vbqpmpa"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_i3nb0"]
+
+[resource]
+script = ExtResource("1_i3nb0")
+card_name = "Grimer"
+rarity = "Uncommon"
+attack = 1
+health = 3
+cost = 2
+ability = "Poison Touch"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

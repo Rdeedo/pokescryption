@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://svi3c3glpr44"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_mj2t0"]
+
+[resource]
+script = ExtResource("1_mj2t0")
+card_name = "Dragonite"
+rarity = "Rare"
+attack = 4
+health = 3
+cost = 4
+ability = "Shell Armor"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

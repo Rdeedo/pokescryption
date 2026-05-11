@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://blr5ivy4ax8gp"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_6k64i"]
+
+[resource]
+script = ExtResource("1_6k64i")
+card_name = "Rattata"
+rarity = "Uncommon"
+attack = 2
+health = 1
+cost = 1
+ability = "None"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

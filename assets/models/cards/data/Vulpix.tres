@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://bpshqo3pppy5b"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_7w3xp"]
+
+[resource]
+script = ExtResource("1_7w3xp")
+card_name = "Vulpix"
+rarity = "Uncommon"
+attack = 1
+health = 1
+cost = 1
+ability = "Flame Body"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

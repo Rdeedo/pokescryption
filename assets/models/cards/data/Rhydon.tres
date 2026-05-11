@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://ddyffqw7rvnxv"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_47x2d"]
+
+[resource]
+script = ExtResource("1_47x2d")
+card_name = "Rhydon"
+rarity = "Uncommon"
+attack = 3
+health = 4
+cost = 3
+ability = "Shell Armor"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

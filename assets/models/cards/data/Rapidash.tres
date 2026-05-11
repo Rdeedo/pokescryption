@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://b1i0r8lqreyh4"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_yqld3"]
+
+[resource]
+script = ExtResource("1_yqld3")
+card_name = "Rapidash"
+rarity = "Uncommon"
+attack = 3
+health = 1
+cost = 2
+ability = "Flame Body"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"

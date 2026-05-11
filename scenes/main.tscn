@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dh8go1dc785p3"]
+[gd_scene load_steps=9 format=3 uid="uid://dh8go1dc785p3"]
 
 [ext_resource type="PackedScene" uid="uid://c405xipi3ll5h" path="res://scenes/pokecenter.tscn" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://dcip0jd2kt767" path="res://scenes/trainer.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://dlrlto1r0vjl5" path="res://scenes/enemy_trainer.tscn" id="3_sugp2"]
+[ext_resource type="AudioStream" uid="uid://4xsu0lfl2vjv" path="res://sounds/music/Pokemon Center Theme.mp3" id="4_jyhfs"]
+[ext_resource type="Script" uid="uid://do71rn0oo0c7g" path="res://scripts/HUD.gd" id="5_tbgi4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0wfyh"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -31,7 +33,7 @@ environment = SubResource("Environment_jyhfs")
 
 [node name="characters" type="Node3D" parent="."]
 
-[node name="Trainer" parent="characters" instance=ExtResource("2_0wfyh")]
+[node name="Trainer" parent="characters" groups=["trainer", "world_root"] instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 1.256124, 0.060539335, 5.464404)
 
 [node name="EnemyTrainer" parent="characters" instance=ExtResource("3_sugp2")]
@@ -41,3 +43,53 @@ transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 8.846923, 0, 0.78094256
 
 [node name="pokecenter" parent="map" instance=ExtResource("1_sugp2")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="MusicPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_jyhfs")
+volume_db = -25.0
+autoplay = true
+
+[node name="UI" type="Node3D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="UI"]
+script = ExtResource("5_tbgi4")
+
+[node name="PriceLabel" type="Label" parent="UI/CanvasLayer"]
+offset_right = 1135.0
+offset_bottom = 650.0
+theme_override_colors/font_color = Color(1, 1, 0.25882354, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 50
+text = "₽: 1"
+horizontal_alignment = 2
+
+[node name="ScaleNumber" type="Label" parent="UI/CanvasLayer"]
+offset_right = 1155.0
+offset_bottom = 653.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+
+[node name="ResultPopup" type="PopupPanel" parent="UI/CanvasLayer"]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(153, 100)
+
+[node name="ResultLabel" type="Label" parent="UI/CanvasLayer/ResultPopup"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 149.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 30
+text = "YOU LOSE"
+horizontal_alignment = 1
+
+[node name="PlayAgainButton" type="Button" parent="UI/CanvasLayer/ResultPopup"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 149.0
+offset_bottom = 96.0
+text = "Play Again?"

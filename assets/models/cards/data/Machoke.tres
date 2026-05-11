@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://beawh77k8ugb1"]
+
+[ext_resource type="Script" uid="uid://b0d8u0anddv0k" path="res://scripts/CardData.gd" id="1_gga06"]
+
+[resource]
+script = ExtResource("1_gga06")
+card_name = "Machoke"
+rarity = "Uncommon"
+attack = 3
+health = 2
+cost = 2
+ability = "None"
+metadata/_custom_type_script = "uid://b0d8u0anddv0k"
